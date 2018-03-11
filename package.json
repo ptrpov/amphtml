@@ -24,13 +24,16 @@
     "test-env-var": "if [ -z \"${AMP_TESTING_HOST}\" ]; then echo \"ERROR: Please set the 'AMP_TESTING_HOST' environment variable. If you are in heroku this can be set by executing 'heroku config:set AMP_TESTING_HOST=my-heroku-subdomain.herokuapp.com' on the command line.\"; exit 1; fi",
     "prepend-amp": "gulp prepend-global --prod node_modules/AMP_CONFIG.json --local_branch --target dist/amp.js && gulp prepend-global --prod node_modules/AMP_CONFIG.json --local_branch --target dist.3p/current/integration.js",
     "prepend-v0": "gulp prepend-global --prod node_modules/AMP_CONFIG.json --local_branch --target dist/v0.js && gulp prepend-global --prod node_modules/AMP_CONFIG.json --local_branch --target dist.3p/current-min/f.js",
-    "preinstall": "node build-system/check-package-manager.js"
+    "preinstall": "node build-system/check-package-manager.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "babel-polyfill": "6.26.0",
     "document-register-element": "1.7.2",
     "promise-pjs": "1.1.3",
-    "web-animations-js": "2.3.1"
+    "web-animations-js": "2.3.1",
+    "snyk": "^1.69.11"
   },
   "devDependencies": {
     "acorn-globals": "4.1.0",
@@ -154,5 +157,6 @@
     "concurrency": 5,
     "tap": true,
     "failFast": true
-  }
+  },
+  "snyk": true
 }
