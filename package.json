@@ -65,7 +65,7 @@
     "express": "4.16.2",
     "fetch-mock": "6.0.1",
     "file-reader": "1.1.1",
-    "formidable": "1.2.0",
+    "formidable": "1.2.1",
     "fs-extra": "5.0.0",
     "glob": "7.1.2",
     "gulp": "3.9.1",
