@@ -59,7 +59,7 @@
     "derequire": "2.0.6",
     "envify": "4.1.0",
     "escodegen": "1.9.1",
-    "eslint": "4.18.2",
+    "eslint": "4.19.1",
     "eslint-plugin-google-camelcase": "0.0.2",
     "esprima": "4.0.0",
     "express": "4.16.2",
